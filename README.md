@@ -37,13 +37,9 @@ We intend our neural network to learn the 'simple' and the 'impulsive' simultane
 
 Using ```torch``` pseudocode, the process can be expressed as:
 ```
-n_dp0=MLP1()
-n_dp1=MLP2()
-n_dp2=MLP3()
-# forward pass
-y=n_dp0(x)
-yDot=n_dp1(x,y)
-yDDot=n_dp2(x,y,yDDot)
+y=n_dp0(x) # MLP forward 1
+yDot=n_dp1(x,y) # MLP forward 2
+yDDot=n_dp2(x,y,yDDot) # MLP forward 3
 return y,yDot,yDDot
 ```
 This simple composition of subnetworks along with augmented multi-order derivatives produce strong improvements while maintaining speeds and costs.  

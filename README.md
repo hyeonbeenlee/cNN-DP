@@ -40,7 +40,6 @@ Using ```torch``` pseudocode, the process can be expressed as:
 y=n_dp0(x) # MLP forward 1
 yDot=n_dp1(x,y) # MLP forward 2
 yDDot=n_dp2(x,y,yDDot) # MLP forward 3
-return y,yDot,yDDot
 ```
 This simple composition of subnetworks along with augmented multi-order derivatives produce strong improvements while maintaining speeds and costs.  
 Although we only use three subnets in our paper, the number of subnets in the cNN-DP is **not strictly limited**. Theoretically 2 to ```inf```.

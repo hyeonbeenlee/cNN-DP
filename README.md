@@ -57,7 +57,7 @@ In the ```examples``` directory, we have **three examples presented in the paper
 
 Simply running the ```datagen.py``` will automatically construct data files in the ```data``` directory.
 
-```train.py``` will train network models and save it to ```models``` directory. Inference of saved models can be easily obtained through ```architectures.interface.NetInterface``` class's ```predict``` method as following pseudocode:
+```train.py``` will train network models and save them to ```models``` directory. Inference of saved models can be easily obtained through ```architectures.interface.NetInterface``` class's ```predict``` method as following pseudocode:
 ```
 n_dp = NetInterface(models/SAVED_MODEL.pt)
 y,yDot,yDDot=n_dp.predict(input)
